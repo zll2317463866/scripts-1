@@ -1,14 +1,12 @@
 /*
 年货节红包
-cron 0 0,8,20,22 * * *  https://raw.githubusercontent.com/smiek2121/scripts/master/gua_nhjRed.js
+cron 0 0,8,20,22 * * *  
 整点跑 红包几率大点
 
-https://u.jd.com/SCLyQi4
-跳转到app 可查看助力情况
 
-返利变量：gua_nhjRed_rebateCode，若需要返利给自己，请自己修改环境变量[gua_nhjRed_rebateCode]
-SCLyQi4换成自己的返利
-export gua_nhjRed_rebateCode="SCLyQi4"
+看着来吧
+
+export gua_nhjRed_rebateCode="Sdu19Mo"
 
 需要助力[火力值]的账号pin值
 如：【京东账号2】pin
@@ -16,10 +14,9 @@ pin1换成对应的pin值 用,分开
 只助力2个 满了脚本自动从ck1开始替换未满的
 export gua_nhjRed_rebatePin="pin1,pin2"
 
-
 */
 
-let rebateCodes = 'SCLyQi4'
+let rebateCodes = 'Sdu19Mo'
 let rebatePin = ''
 
 const $ = new Env('年货节红包');
@@ -140,9 +137,9 @@ let timeH = $.time('H')
   }
   if(Object.getOwnPropertyNames($.shareCodeArr).length > 0 && $.shareCodeArr["updateTime"] != pinUpdateTime) $.setdata($.shareCodeArr,'gua_JDnhjRed')
   if(message){
-    $.msg($.name, ``, `${message}\nhttps://u.jd.com/SCLyQi4\n\n跳转到app 可查看助力情况`);
+    $.msg($.name, ``, `${message}\nhttps://u.jd.com/Sdu19Mo\n\n跳转到app 可查看助力情况`);
     if ($.isNode()){
-      // await notify.sendNotify(`${$.name}`, `${message}\n\nhttps://u.jd.com/SCLyQi4\n跳转到app 可查看助力情况`);
+      // await notify.sendNotify(`${$.name}`, `${message}\n\nhttps://u.jd.com/Sdu19Mo\n跳转到app 可查看助力情况`);
     }
   }
 })()
